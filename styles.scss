@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --darkcyan: hsl(185, 75%, 39%);
+  --verydarkdesaturatedblue: hsl(229, 23%, 23%);
+  --darkgrayishblue: hsl(227, 10%, 46%);
+  --darkgray: hsl(0, 0%, 59%);
+  --darkgra1y: hsla(0, 0%, 59%, 0.74);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--darkcyan);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  width: 350px;
+  box-shadow: 10px 15px 20px #52525250;
+
+  &-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px;
+    width: 100%;
+    color: var(--verydarkdesaturatedblue);
+
+    &-imagen {
+      border-radius: 100%;
+      margin-top: -15%;
+      border: solid 5px white;
+      background-color: white;
+    }
+
+    span {
+      font-weight: 400;
+      color: var(--darkgray);
+      margin-left: 0.6rem;
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--darkgray);
+      font-size: 18px;
+      margin-top: -5px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // align-items: center;
+    width: 100%;
+    border-top: solid 1px rgba(153, 153, 153, 0.212);
+    margin-bottom: 20px;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-info h2 {
+      color: var(--verydarkdesaturatedblue);
+      margin-bottom: 10px;
+    }
+    &-info p {
+      color: var(--darkgray);
+      margin-top: 3px;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
+}
